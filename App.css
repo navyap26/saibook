@@ -1,0 +1,157 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+* {
+  box-sizing: border-box;
+}
+
+/* GLOBAL STYLES */
+
+body,
+.App {
+  font-family:'Times New Roman', Times, serif;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 16px;
+  background:rgb(189, 187, 186);
+}
+
+button {
+  background: none;
+  border: 0;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  color: rgb(65, 129, 156);
+}
+button:hover {
+  color: rgb(70, 90, 131);
+}
+
+.App {
+  display:flex;
+}
+
+/* SIDEBAR STYLES */
+
+.app-sidebar {
+  width: 30%;
+  height: 100vh;
+  border-right: 1px solid rgb(182, 44, 44);
+}
+
+.app-sidebar-header {
+  display:inline-block;
+  justify-content: space-between;
+  padding: 20px;
+}
+.app-sidebar-header h1 {
+  margin: 20px;
+}
+
+.app-sidebar-notes {
+  height: calc(100vh - 78px);
+  overflow-y: scroll;
+}
+.app-sidebar-note {
+  padding: 25px;
+  cursor: pointer;
+}
+.sidebar-note-title {
+  display:flex;
+  justify-content:center;
+}
+.app-sidebar-note button {
+  margin-block-end: 20px;
+  color: rgb(141, 6, 33);
+}
+.app-sidebar-note p {
+  margin: 10px 0;
+}
+.app-sidebar-note small {
+  display: block;
+  color: rgb(119, 70, 70);
+}
+
+.app-sidebar-note:hover {
+  background: #ddd;
+}
+.app-sidebar-note.active,
+.app-sidebar-note.active small {
+  background: rgb(207, 146, 117);
+  color: white;
+}
+
+/* NOTE EDITOR/PREVIEW (MAIN) STYLES */
+
+.app-main {
+  width: 70%;
+  height: 100vh;
+}
+.app-main-note-edit,
+.app-main-note-preview {
+  height: 50vh;
+}
+
+.app-main-note-preview button{
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(119, 70, 70);
+  background-color: rgba(207, 146, 117, 0.685);
+  cursor: pointer;
+  margin-left: 10px;
+
+}
+
+.no-active-note {
+  width: 70%;
+  height: 100vh;
+  line-height: 100vh;
+  text-align: center;
+  font-size: 2rem;
+  color: #999;
+}
+
+/* Editing */
+.app-main-note-edit {
+  padding: 25px;
+}
+
+.app-main-note-edit input,
+textarea {
+  display: block;
+  border: 3px solid rgb(133, 79, 79);
+  margin-bottom: 20px;
+  width: 100%;
+  height: 250px;
+  padding: 10px;
+  resize: none;
+  font-size: inherit;
+  font-family: inherit;
+  background:rgb(189, 187, 186);
+}
+.app-main-note-edit input {
+  height: 50px;
+  font-size: 2.5rem;
+}
+
+/* Preview */
+.app-main-note-preview {
+  border-top: 1px solid #ddd;
+  overflow-y: scroll;
+  background: rgba(119, 11, 11, 0.02);
+}
+
+.preview-title {
+  padding: 25px 25px 0 25px;
+  margin: 0;
+}
+
+.markdown-preview {
+  padding: 0 25px 25px 25px;
+  font-size: 1rem;
+  line-height: 2rem;
+}
