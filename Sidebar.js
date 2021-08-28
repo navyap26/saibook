@@ -2,7 +2,7 @@ import "./App.css";
 function Sidebar({
   bhajans,
   onAddBhajan,
-  //onDeleteBhajan,
+  onDeleteBhajan,
   currentBhajan,
   setCurrentBhajan,
 }) {
@@ -25,8 +25,8 @@ function Sidebar({
               <strong>{bhajan.title}</strong> 
               
             </div>
-
             <p>{bhajan.body && bhajan.body.substr(0, 15) + "..."}</p>
+            <button onClick={() => onDeleteBhajan(bhajan.id)}>Delete</button>
           </div>
         ))}
       </div>
